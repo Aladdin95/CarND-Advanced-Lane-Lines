@@ -169,6 +169,9 @@ Here's a [link to my video result](./test_videos_output/project_video.mp4)
 1. Briefly discuss any problems / issues you faced in your implementation of this project. Where will your pipeline likely fail? What could you do to make it more robust?
 
 the main problem i faced is to extract the prespective transform points.
-i really think that any transform will change the dimention of the image and that also would affect the values ym_per_pix and xm_per_pex as the lina length in pixels is dependent on how i made the transform
+
+i really think that any transform will change the dimentions of the lane and that also would affect the values ym_per_pix and xm_per_pex as the line length in pixels is dependent on how i made the transform
+
 i think my pipeline could fail if it faced a big sequence of untrusted frames 
+
 i think a more improvement in the thresholding, prespective parameters and classes would help 
