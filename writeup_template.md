@@ -118,7 +118,6 @@ I verified that my perspective transform was working as expected by drawing the 
 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
-#### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial
 
@@ -131,12 +130,18 @@ then i passed those points to function np.poly fit to get the polynomial coeffic
 ```
 
 
-(those steps are in a number of cells just after markdown cell contains "here a function that use sliding window to extract only the points related to the lane lines followed by a cell to test it" in `Advanced Lane Finding.ipynb`). 
+(those steps are in a number of cells just after markdown cell contains "here a function that use sliding window to extract only the points related to the lane line followed by a cell to test it" in `Advanced Lane Finding.ipynb`). 
 
 
 ![alt text][image8]
 
+#### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
+i calculated radius of curvature based on polynomial coefficients and the y value of the bottom and also calculated offset from center
+i did this step in a funcrion called "get_lane_points_and_curvature" 
+
+the code is just after markdown cell contains 
+"here a function that use the points extracted to fit a polynomial and get its points and to calculate the curvature and offset from center"
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
